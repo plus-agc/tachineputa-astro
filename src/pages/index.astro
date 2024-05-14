@@ -1,23 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import logo from "../images/2024_logo.svg";
+import tachineputa_1 from "../images/tachineputa_1.png";
+import tachineputa_2 from "../images/tachineputa_2.png";
 ---
 
 <Layout title="立佞武多公式サイト">
   <main class="main">
-    <div class="p-hero bg-gradient">
+    <div class="p-hero">
       <div class="parallax hero" id="parallax-02">
-        <div class="flex">
-          <div class="flex__item" data-grid="sp12 lap12" data-align="middle">
-            <div class="p-hero__body">
-              <p class="p-hero__title hero-title l-spacer -center">
-                <img
-                  class="wow animate__animated animate__fadeIn"
-                  src="/images/logo.png"
-                  data-wow-delay="4s"
-                  alt=""
-                />
-              </p>
-            </div>
+        <div class="p-hero__body">
+          <div class="flex" data-align="center middle">
+            <p
+              class="pc flex-item p-hero__title hero-title l-spacer -center"
+              data-grid="lap4"
+            >
+              <Image
+                src={logo}
+                alt="ロゴ"
+                class="wow animate__animated animate__fadeIn"
+                data-wow-delay="1s"
+              />
+            </p>
           </div>
         </div>
       </div>
@@ -59,6 +64,11 @@ import Layout from "../layouts/Layout.astro";
             </div>
           </div>
         </div>
+        <img
+          class="wow animate__animated animate__fadeInLeft animate-Left"
+          src="/images/animate_2.png"
+          alt=""
+        />
       </div>
     </section>
     <section class="l-spacer -bgLightGrey bg-pattern" id="root">
