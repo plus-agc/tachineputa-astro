@@ -6,12 +6,12 @@ type Props = MarkdownLayoutProps<{
   date: string;
 }>;
 const { frontmatter } = Astro.props;
-
+const title = frontmatter?.title || "デフォルトタイトル";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,7 @@ import Footer from "../components/Footer.astro";
     <meta property="og:image" content="" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script
       async=""
@@ -54,7 +54,7 @@ import Footer from "../components/Footer.astro";
               <p class="p-hero__title">
                 <strong class="p-hero__strong"
                   ><span class="u-wbr p-hero__node font-responsive"
-                    ><span>{frontmatter.title}</span></span
+                    ><span>{title}</span></span
                   ></strong
                 >
               </p>
@@ -519,9 +519,20 @@ import Footer from "../components/Footer.astro";
   }
 
   body {
-    font-family: Montserrat, -apple-system, system-ui, 游ゴシック, Yu Gothic,
-      游ゴシック体, YuGothic, ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro,
-      Meiryo UI, メイリオ, Meiryo, sans-serif;
+    font-family:
+      Montserrat,
+      -apple-system,
+      system-ui,
+      游ゴシック,
+      Yu Gothic,
+      游ゴシック体,
+      YuGothic,
+      ヒラギノ角ゴ Pro W3,
+      Hiragino Kaku Gothic Pro,
+      Meiryo UI,
+      メイリオ,
+      Meiryo,
+      sans-serif;
     color: #0d0d0d;
     font-weight: 700;
   }
@@ -1437,7 +1448,8 @@ import Footer from "../components/Footer.astro";
     right: 0;
     bottom: 0;
     left: 0;
-    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transition:
+      transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
       opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 2;
     width: 100vw;
@@ -1606,7 +1618,8 @@ import Footer from "../components/Footer.astro";
   .p-hamburger__line:before {
     display: block;
     position: absolute;
-    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transition:
+      transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
       top 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
     border-radius: inherit;
     background-color: inherit;
@@ -1647,7 +1660,8 @@ import Footer from "../components/Footer.astro";
   .is-drawerActive .p-hamburger__line:after,
   .is-drawerActive .p-hamburger__line:before {
     top: 0;
-    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s,
+    transition:
+      transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s,
       top 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     background-color: #fff;
   }
@@ -1767,7 +1781,8 @@ import Footer from "../components/Footer.astro";
 
   .p-hero__mono {
     transform-origin: left bottom;
-    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transition:
+      transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
       opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: rotateY(12deg);
     opacity: 0;
@@ -1805,7 +1820,8 @@ import Footer from "../components/Footer.astro";
 
   .p-hero__color {
     transform-origin: left bottom;
-    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transition:
+      transform 1s cubic-bezier(0.165, 0.84, 0.44, 1),
       opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: rotateY(12deg);
     opacity: 0;
@@ -1859,7 +1875,8 @@ import Footer from "../components/Footer.astro";
 
   .p-hero__node > span {
     display: inline-block;
-    transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transition:
+      opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1),
       transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: translateX(2rem);
     opacity: 0;
@@ -5298,7 +5315,8 @@ import Footer from "../components/Footer.astro";
     border-radius: 0;
     opacity: 0;
     transform-origin: 0 100%;
-    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.5),
+    box-shadow:
+      0 0.125em 0.25em rgba(0, 0, 0, 0.5),
       0 0.125em 0.5em rgba(0, 0, 0, 0.75);
     z-index: 0;
   }
@@ -5473,7 +5491,8 @@ import Footer from "../components/Footer.astro";
   }
 
   .tick-flip-shadow {
-    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.25),
+    box-shadow:
+      0 0.125em 0.3125em rgba(0, 0, 0, 0.25),
       0 0.02125em 0.06125em rgba(0, 0, 0, 0.25);
   }
 
