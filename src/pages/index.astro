@@ -5,298 +5,283 @@ import Livestream from "../components/livestream.astro";
 ---
 
 <Layout title="立佞武多公式サイト">
-    <main class="main">
-        <div class="p-hero">
-            <div>
-                <picture class="hero-image">
-                    <source
-                            media="(min-width: 1366px)"
-                            srcset="/images/24_hero_pc.webp"
-                    />
-                    <source
-                            media="(min-width: 1024px)"
-                            srcset="/images/24_hero_tab.webp"
-                    />
-                    <img src="/images/24_hero_sp.webp" alt="2024年立佞武多"/>
-                </picture>
+  <main class="main">
+    <div class="p-hero">
+      <div>
+        <picture class="hero-image">
+          <source
+            media="(min-width: 1366px)"
+            srcset="/images/24_hero_pc.webp"
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="/images/24_hero_tab.webp"
+          />
+          <img src="/images/24_hero_sp.webp" alt="2024年立佞武多" />
+        </picture>
+      </div>
+      <section class="l-spacer -bgLightGrey -bgImage box-shadow" id="about">
+        <div class="l-spacer -primary text-white text-shadowBlur">
+          <div class="l-container">
+            <img
+              class="wow animate__animated animate__fadeInRight animate-right"
+              src="/images/animate_1.webp"
+              alt=""
+            />
+            <h2
+              class="c-heading -primary -center roll font-hero m-0"
+              lang="en"
+              data-type="standUpIn"
+              data-duration="fast"
+            >
+              <span>令</span><span>和</span><span>6</span><span>年</span><span
+                >度</span
+              ><span>開</span><span>催</span><span>終</span><span>了</span>
+            </h2>
+            <div class="l-spacer -top">
+              <div class="l-container">
+                <p class="c-heading -primary -center roll is-rollActive">
+                  <span class="u-wr">ありがとうございました。</span>
+                </p>
+              </div>
             </div>
-            <section class="l-spacer -bgLightGrey -bgImage box-shadow" id="about">
-                <div class="l-spacer -primary text-white text-shadowBlur">
-                    <div class="l-container">
-                        <img
-                                class="wow animate__animated animate__fadeInRight animate-right"
-                                src="/images/animate_1.webp"
-                                alt=""
-                        />
-                        <h2
-                                class="c-heading -primary -center roll font-hero m-0"
-                                lang="en"
-                                data-type="standUpIn"
-                                data-duration="fast"
-                        >
-                            <span>令</span><span>和</span><span>6</span><span>年</span><span
-                        >度</span
-                        ><span>開</span><span>催</span><span>終</span><span>了</span>
-                        </h2>
-                        <div class="l-spacer -top">
-                            <div class="l-container">
-                                <p class="c-heading -primary -center roll is-rollActive">
-                                    <span class="u-wr">ありがとうございました。</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="l-spacer -top -mtLarge">
-                            <div class="l-container -narrow -top -mtMedium">
-                                <div class="flex gap" data-align="justify">
-                                    <div
-                                            class="flex__item"
-                                            data-grid="sp12 tab6 lap2"
-                                            data-align="middle"
-                                    >
-                                        <a
-                                                href="./file/2024koutsuukisei.pdf"
-                                                class="c-button -primary"
-                                                target="_blank">交通規制図</a
-                                        >
-                                    </div>
-                                    <div
-                                            class="flex__item"
-                                            data-grid="sp12 tab6 lap2"
-                                            data-align="middle"
-                                    >
-                                        <a
-                                                href="./file/2024shutsujinnitteitorekishi_2.pdf"
-                                                class="c-button -primary"
-                                                target="_blank">日程と歴史</a
-                                        >
-                                    </div>
-                                    <div
-                                            class="flex__item"
-                                            data-grid="sp12 tab6 lap2"
-                                            data-align="middle"
-                                    >
-                                        <a
-                                                href="./file/2024oogatakaisetsu.pdf"
-                                                class="c-button -primary"
-                                                target="_blank">大型解説</a
-                                        >
-                                    </div>
-                                    <div
-                                            class="flex__item"
-                                            data-grid="sp12 tab6 lap2"
-                                            data-align="middle"
-                                    >
-                                        <a
-                                                href="./file/2024hyoushi.pdf"
-                                                class="c-button -primary"
-                                                target="_blank">表紙</a
-                                        >
-                                    </div>
-                                    <div
-                                            class="flex__item"
-                                            data-grid="sp12 tab6 lap2"
-                                            data-align="middle"
-                                    >
-                                        <a
-                                                href="./file/2024Q&A_2.pdf"
-                                                class="c-button -primary"
-                                                target="_blank">Q&A</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="l-spacer -top -mtLarge">
+              <div class="l-container -narrow -top -mtMedium">
+                <div class="flex gap" data-align="justify">
+                  <div
+                    class="flex__item"
+                    data-grid="sp12 tab6 lap2"
+                    data-align="middle"
+                  >
+                    <a
+                      href="./file/2024koutsuukisei.pdf"
+                      class="c-button -primary"
+                      target="_blank">交通規制図</a
+                    >
+                  </div>
+                  <div
+                    class="flex__item"
+                    data-grid="sp12 tab6 lap2"
+                    data-align="middle"
+                  >
+                    <a
+                      href="./file/2024shutsujinnitteitorekishi_2.pdf"
+                      class="c-button -primary"
+                      target="_blank">日程と歴史</a
+                    >
+                  </div>
+                  <div
+                    class="flex__item"
+                    data-grid="sp12 tab6 lap2"
+                    data-align="middle"
+                  >
+                    <a
+                      href="./file/2024oogatakaisetsu.pdf"
+                      class="c-button -primary"
+                      target="_blank">大型解説</a
+                    >
+                  </div>
+                  <div
+                    class="flex__item"
+                    data-grid="sp12 tab6 lap2"
+                    data-align="middle"
+                  >
+                    <a
+                      href="./file/2024hyoushi.pdf"
+                      class="c-button -primary"
+                      target="_blank">表紙</a
+                    >
+                  </div>
+                  <div
+                    class="flex__item"
+                    data-grid="sp12 tab6 lap2"
+                    data-align="middle"
+                  >
+                    <a
+                      href="./file/2024Q&A_2.pdf"
+                      class="c-button -primary"
+                      target="_blank">Q&A</a
+                    >
+                  </div>
                 </div>
-                <img
-                        class="wow animate__animated animate__fadeInLeft animate-Left"
-                        src="/images/animate_2.webp"
-                        alt=""
-                />
-            </section>
+              </div>
+            </div>
+          </div>
         </div>
-        <section class="l-spacer -bgLightGrey bg-pattern" id="root">
-            <div class="l-spacer -primary">
-                <div class="l-spacer -primary">
-                    <div>
-                        <h3
-                                class="c-heading -primary -center roll is-rollActive"
-                                lang="en"
-                                data-type="standUpIn"
-                                data-duration="fast"
-                        >
-                            <span>令和6年度観覧席販売数</span>
-                        </h3>
-                        <div class="l-container -narrow">
-                            <div class="l-spacer -mtMedium -top">
-                                <table style="margin:0 auto;">
-                                    <tr>
-                                        <th>販売元</th>
-                                        <th>席数</th>
-                                        <th>お問い合わせ先</th>
-                                        <th
-                                        >料金（お一人様）
-                                        </th
-                                        >
-                                        <th>備考</th>
-                                    </tr>
-                                    <tr>
-                                        <td>（株）五所川原エフエム</td>
-                                        <td>550席</td>
-                                        <td
-                                        >0173-34-3311
-                                        </td
-                                        >
-                                        <td>3,300円</td>
-                                        <td>観覧席のみ提供、指定できず</td>
-                                    </tr>
-                                    <tr>
-                                        <td>まちなか五所川原</td>
-                                        <td>500席</td>
-                                        <td>0173-33-6338
-                                        </td
-                                        >
-                                        <td>3,500円</td>
-                                        <td>観覧席のみ提供、指定できず</td>
-                                    </tr>
-                                    <tr>
-                                        <td>珈琲詩人</td>
-                                        <td>40席</td>
-                                        <td>0173-33-1584</td>
-                                        <td
-                                        >3,000円
-                                        </td
-                                        >
-                                        <td>観覧席のみ提供、指定できず</td>
-                                    </tr>
-                                    <tr>
-                                        <td>モホドリ蒸留研究所</td>
-                                        <td>72席</td>
-                                        <td>0173-23-5805
-                                        </td
-                                        >
-                                        <td>5,000円</td>
-                                        <td>観覧席、お土産付</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="/news/post-2">平山文具店</a></td>
-                                        <td>35席
-                                        </td
-                                        >
-                                        <td>090-9633-5697</td>
-                                        <td>1,000円</td>
-                                        <td>観覧席</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="l-spacer -mtMedium -top">
-                                <div class="flex gap" data-align="center">
-                                    <div class="flex__item" data-align="middle">
-                                        <a
-                                                href="./file/2024_sponsored_5.pdf"
-                                                class="c-button -primary"
-                                                target="_blank">協賛事業所一覧</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <img
+          class="wow animate__animated animate__fadeInLeft animate-Left"
+          src="/images/animate_2.webp"
+          alt=""
+        />
+      </section>
+    </div>
+    <section class="l-spacer -bgLightGrey bg-pattern" id="root">
+      <div class="l-spacer -primary">
+        <div class="l-spacer -primary">
+          <div>
+            <h3
+              class="c-heading -primary -center roll is-rollActive"
+              lang="en"
+              data-type="standUpIn"
+              data-duration="fast"
+            >
+              <span>令和6年度観覧席販売数</span>
+            </h3>
+            <div class="l-container -narrow">
+              <div class="l-spacer -mtMedium -top">
+                <table style="margin:0 auto;">
+                  <tr>
+                    <th>販売元</th>
+                    <th>席数</th>
+                    <th>お問い合わせ先</th>
+                    <th>料金（お一人様） </th>
+                    <th>備考</th>
+                  </tr>
+                  <tr>
+                    <td>（株）五所川原エフエム</td>
+                    <td>550席</td>
+                    <td>0173-34-3311 </td>
+                    <td>3,300円</td>
+                    <td>観覧席のみ提供、指定できず</td>
+                  </tr>
+                  <tr>
+                    <td>まちなか五所川原</td>
+                    <td>500席</td>
+                    <td>0173-33-6338 </td>
+                    <td>3,500円</td>
+                    <td>観覧席のみ提供、指定できず</td>
+                  </tr>
+                  <tr>
+                    <td>珈琲詩人</td>
+                    <td>40席</td>
+                    <td>0173-33-1584</td>
+                    <td>3,000円 </td>
+                    <td>観覧席のみ提供、指定できず</td>
+                  </tr>
+                  <tr>
+                    <td>モホドリ蒸留研究所</td>
+                    <td>72席</td>
+                    <td>0173-23-5805 </td>
+                    <td>5,000円</td>
+                    <td>観覧席、お土産付</td>
+                  </tr>
+                  <tr>
+                    <td><a href="/news/post-2">平山文具店</a></td>
+                    <td>35席 </td>
+                    <td>090-9633-5697</td>
+                    <td>1,000円</td>
+                    <td>観覧席</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="l-spacer -mtMedium -top">
+                <div class="flex gap" data-align="center">
+                  <div class="flex__item" data-align="middle">
+                    <a
+                      href="./file/2024_sponsored_5.pdf"
+                      class="c-button -primary"
+                      target="_blank">協賛事業所一覧</a
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
-            <section class="l-spacer" id="news">
-                <div class="parallax bg-01" id="parallax-01">
-                    <div class="mask">
-                        <img
-                                class="wow animate__animated animate__fadeInRight parallax-animate-right"
-                                src="/images/yattemare.svg"
-                                alt=""
-                        />
-                        <div class="flex">
-                            <div class="flex__item l-spacer -center" data-grid="sp12">
-                                <h3
-                                        class="c-heading -primary -center roll"
-                                        lang="en"
-                                        data-type="standUpIn"
-                                        data-duration="fast"
-                                >
-                                    <span>お知らせ</span>
-                                </h3>
-                                <div class="news-wrapper">
-                                    <!--<div class="news-item">-->
-                                    <!--    <div class="date">2024.12.17</div>-->
-                                    <!--    <div class="desc">-->
-                                    <!--        <a href="/news/post-3" target="_blank"-->
-                                    <!--        >2025年度「五所川原立佞武多」ポスターデザインコンペ開催のお知らせ</a-->
-                                    <!--        >-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
-                                    <div class="news-item">
-                                        <div class="date">2024.05.29</div>
-                                        <div class="desc">
-                                            <a href="/news/post-2" target="_blank"
-                                            >大型立佞武多曳き手募集について</a
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                    class="flex__item l-spacer -center"
-                                    data-grid="sp12"
-                                    data-align="center middle"
-                            >
-                                <h4
-                                        class="c-detail -center roll"
-                                        lang="en"
-                                        data-type="standUpIn"
-                                        data-duration="fast"
-                                >
-                                    <span>情報は随時更新予定&#33;</span>
-                                </h4>
-                            </div>
-                        </div>
-                        <img
-                                class="wow animate__animated animate__fadeInLeft parallax-animate-left"
-                                src="/images/yattemare_2.svg"
-                                alt=""
-                        />
+          </div>
+        </div>
+      </div>
+      <section class="l-spacer" id="news">
+        <div class="parallax bg-01" id="parallax-01">
+          <div class="mask">
+            <img
+              class="wow animate__animated animate__fadeInRight parallax-animate-right"
+              src="/images/yattemare.svg"
+              alt=""
+            />
+            <div class="flex">
+              <div class="flex__item l-spacer -center" data-grid="sp12">
+                <h3
+                  class="c-heading -primary -center roll"
+                  lang="en"
+                  data-type="standUpIn"
+                  data-duration="fast"
+                >
+                  <span>お知らせ</span>
+                </h3>
+                <div class="news-wrapper">
+                  <div class="news-item">
+                    <div class="date">2024.12.23</div>
+                    <div class="desc">
+                      <a href="/news/post-3" target="_blank">
+                        2025年度「五所川原立佞武多」ポスターデザインコンペ開催のお知らせ
+                      </a>
                     </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="date">2024.05.29</div>
+                    <div class="desc">
+                      <a href="/news/post-2" target="_blank"
+                        >大型立佞武多曳き手募集について</a
+                      >
+                    </div>
+                  </div>
                 </div>
-            </section>
-            <section id="departure">
-                <div class="p-hero">
-                    <div class="flex" data-dir="reverse">
-                        <div
-                                class="flex__item bg-pattern"
-                                data-grid="sp12 lap6"
-                                data-align="middle"
-                        >
-                            <div class="p-hero__body">
-                                <p class="p-hero__title">
-                                    <strong class="p-hero__strong"
-                                    ><span
-                                            class="u-wbr p-hero__node roll d-block"
-                                            lang="en"
-                                            data-type="standUpIn"
-                                            data-duration="fast"
-                                    ><span>題</span><span>名</span><span>
+              </div>
+              <div
+                class="flex__item l-spacer -center"
+                data-grid="sp12"
+                data-align="center middle"
+              >
+                <h4
+                  class="c-detail -center roll"
+                  lang="en"
+                  data-type="standUpIn"
+                  data-duration="fast"
+                >
+                  <span>情報は随時更新予定&#33;</span>
+                </h4>
+              </div>
+            </div>
+            <img
+              class="wow animate__animated animate__fadeInLeft parallax-animate-left"
+              src="/images/yattemare_2.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section id="departure">
+        <div class="p-hero">
+          <div class="flex" data-dir="reverse">
+            <div
+              class="flex__item bg-pattern"
+              data-grid="sp12 lap6"
+              data-align="middle"
+            >
+              <div class="p-hero__body">
+                <p class="p-hero__title">
+                  <strong class="p-hero__strong"
+                    ><span
+                      class="u-wbr p-hero__node roll d-block"
+                      lang="en"
+                      data-type="standUpIn"
+                      data-duration="fast"
+                      ><span>題</span><span>名</span><span>
                         <ruby>
                           <rb>「暫」</rb>
                           <rp>（</rp>
                           <rt>しばらく</rt>
                           <rp>）</rp>
                         </ruby></span
-                                    ></span
-                                    ><span
-                                            class="u-wbr p-hero__node font-2rem-half roll d-block l-spacer -mtSmall"
-                                            lang="en"
-                                            data-type="standUpIn"
-                                            data-duration="fast"
-                                    ><small
-                                    ><span>制</span><span>作</span><span>者</span><span
-                                    >：</span
-                                    ><span>
+                      ></span
+                    ><span
+                      class="u-wbr p-hero__node font-2rem-half roll d-block l-spacer -mtSmall"
+                      lang="en"
+                      data-type="standUpIn"
+                      data-duration="fast"
+                      ><small
+                        ><span>制</span><span>作</span><span>者</span><span
+                          >：</span
+                        ><span>
                           <ruby>
                             <rb>鶴</rb>
                             <rp>（</rp>
@@ -321,15 +306,15 @@ import Livestream from "../components/livestream.astro";
                             <rt>のり</rt>
                             <rp>）</rp>
                           </ruby></span
-                                    ></small
-                                    ></span
-                                    ></strong
-                                    >
-                                </p>
-                                <div class="l-spacer -mtSmall -top">
-                                    <p class="p-hero__text">
+                        ></small
+                      ></span
+                    ></strong
+                  >
+                </p>
+                <div class="l-spacer -mtSmall -top">
+                  <p class="p-hero__text">
                     <span class="u-wbr"
-                    >歌舞伎十八番の一つに数えられる演目 暫（しばらく）。横暴な
+                      >歌舞伎十八番の一つに数えられる演目 暫（しばらく）。横暴な
                       公卿 （ くげ ） の 清原武衛 （ きよはらのたけひら ）
                       が、自らに反対する善良な 加茂次郎義綱 （
                       かもじろうよしつな ） らを捕え、処刑しようとしたその時、
@@ -338,102 +323,102 @@ import Livestream from "../components/livestream.astro";
                       公卿 （ くげ ） とその家来たちの悪事を暴き 大見得 （
                       おおみえ ） を切る場面。</span
                     ><span class="u-wbr"
-                                    >江戸時代の初代市川團十郎以来、代々演じられてきた 「荒事」
-                      （ あらごと ）を表現した。<br/>
+                      >江戸時代の初代市川團十郎以来、代々演じられてきた 「荒事」
+                      （ あらごと ）を表現した。<br />
                       東京オリンピック・パラリンピック開催の活況の中、世界に向け、五所川原立佞武多、そして日本の伝統文化をアピールする。</span
-                                    >
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex__item" data-grid="sp12 lap6">
-                            <figure class="p-hero__figure">
-                                <ul class="flex">
-                                    <li class="flex__item" data-grid="sp4">
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex__item" data-grid="sp12 lap6">
+              <figure class="p-hero__figure">
+                <ul class="flex">
+                  <li class="flex__item" data-grid="sp4">
                     <span class="p-hero__imageWrap"
-                    ><span class="p-hero__color"
-                    ><img
-                            class="p-hero__image"
-                            src="/images/shibaraku-left.webp"
-                            srcset="
+                      ><span class="p-hero__color"
+                        ><img
+                          class="p-hero__image"
+                          src="/images/shibaraku-left.webp"
+                          srcset="
 							  /images/shibaraku-left.webp,
 							  /images/shibaraku-left@2x.webp 2x
 							"
-                            alt=""
-                            decoding="async"
-                    /></span
-                    ></span
+                          alt=""
+                          decoding="async"
+                        /></span
+                      ></span
                     >
-                                    </li>
-                                    <li class="flex__item" data-grid="sp4">
+                  </li>
+                  <li class="flex__item" data-grid="sp4">
                     <span class="p-hero__imageWrap"
-                    ><span class="p-hero__color"
-                    ><img
-                            class="p-hero__image"
-                            src="/images/shibaraku-center.webp"
-                            srcset="
+                      ><span class="p-hero__color"
+                        ><img
+                          class="p-hero__image"
+                          src="/images/shibaraku-center.webp"
+                          srcset="
 							  /images/shibaraku-center.webp,
 							  /images/shibaraku-center@2x.webp 2x
 							"
-                            alt=""
-                            decoding="async"
-                    /></span
-                    ></span
+                          alt=""
+                          decoding="async"
+                        /></span
+                      ></span
                     >
-                                    </li>
-                                    <li class="flex__item" data-grid="sp4">
+                  </li>
+                  <li class="flex__item" data-grid="sp4">
                     <span class="p-hero__imageWrap"
-                    ><span class="p-hero__color"
-                    ><img
-                            class="p-hero__image"
-                            src="/images/shibaraku-right.webp"
-                            srcset="
+                      ><span class="p-hero__color"
+                        ><img
+                          class="p-hero__image"
+                          src="/images/shibaraku-right.webp"
+                          srcset="
 							  /images/shibaraku-right.webp,
 							  /images/shibaraku-right@2x.webp 2x
 							"
-                            alt=""
-                            decoding="async"
-                    /></span
-                    ></span
+                          alt=""
+                          decoding="async"
+                        /></span
+                      ></span
                     >
-                                    </li>
-                                </ul>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-hero">
-                    <div class="flex">
-                        <div
-                                class="flex__item bg-pattern"
-                                data-grid="sp12 lap6"
-                                data-align="middle"
-                        >
-                            <div class="p-hero__body">
-                                <p class="p-hero__title">
-                                    <strong class="p-hero__strong"
-                                    ><span
-                                            class="u-wbr p-hero__node roll d-block"
-                                            lang="en"
-                                            data-type="standUpIn"
-                                            data-duration="fast"
-                                    ><span>題</span><span>名</span><span>
+                  </li>
+                </ul>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="p-hero">
+          <div class="flex">
+            <div
+              class="flex__item bg-pattern"
+              data-grid="sp12 lap6"
+              data-align="middle"
+            >
+              <div class="p-hero__body">
+                <p class="p-hero__title">
+                  <strong class="p-hero__strong"
+                    ><span
+                      class="u-wbr p-hero__node roll d-block"
+                      lang="en"
+                      data-type="standUpIn"
+                      data-duration="fast"
+                      ><span>題</span><span>名</span><span>
                         <ruby>
                           <rb>「金太郎」</rb>
                           <rp>（</rp>
                           <rt>きんたろう</rt>
                           <rp>）</rp>
                         </ruby></span
-                                    ></span
-                                    ><span
-                                            class="u-wbr p-hero__node font-2rem-half roll d-block l-spacer -mtSmall"
-                                            lang="en"
-                                            data-type="standUpIn"
-                                            data-duration="fast"
-                                    ><small
-                                    ><span>制</span><span>作</span><span>者</span><span
-                                    >：</span
-                                    ><span>
+                      ></span
+                    ><span
+                      class="u-wbr p-hero__node font-2rem-half roll d-block l-spacer -mtSmall"
+                      lang="en"
+                      data-type="standUpIn"
+                      data-duration="fast"
+                      ><small
+                        ><span>制</span><span>作</span><span>者</span><span
+                          >：</span
+                        ><span>
                           <ruby>
                             <rb>鶴</rb>
                             <rp>（</rp>
@@ -458,95 +443,95 @@ import Livestream from "../components/livestream.astro";
                             <rt>のり</rt>
                             <rp>）</rp>
                           </ruby></span
-                                    ></small
-                                    ></span
-                                    ></strong
-                                    >
-                                </p>
-                                <div class="l-spacer -mtSmall -top">
-                                    <p class="p-hero__text">
+                        ></small
+                      ></span
+                    ></strong
+                  >
+                </p>
+                <div class="l-spacer -mtSmall -top">
+                  <p class="p-hero__text">
                     <span class="u-wbr"
-                    >おとぎ話で有名な金太郎は、五月人形としても人気で、気持ちの優しい、健やかな子どもに成長してほしいという願いが込められています。また、
+                      >おとぎ話で有名な金太郎は、五月人形としても人気で、気持ちの優しい、健やかな子どもに成長してほしいという願いが込められています。また、
                       鯉 （ こい ） の滝登りには「勢いが良いことの例え」や
                       「立身出世」 （ りっしんしゅっせ ） の意味があります。</span
                     ><span class="u-wbr"
-                                    >今年の祭りには、ぜひ、多くの子どもたちに参加してもらい、祭りの楽しさを体験してほしいと思います。</span
-                                    >
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex__item" data-grid="sp12 lap6">
-                            <figure class="p-hero__figure">
-                                <ul class="flex">
-                                    <li class="flex__item" data-grid="sp4">
+                      >今年の祭りには、ぜひ、多くの子どもたちに参加してもらい、祭りの楽しさを体験してほしいと思います。</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex__item" data-grid="sp12 lap6">
+              <figure class="p-hero__figure">
+                <ul class="flex">
+                  <li class="flex__item" data-grid="sp4">
                     <span class="p-hero__imageWrap"
-                    ><span class="p-hero__color"
-                    ><img
-                            class="p-hero__image"
-                            src="/images/kintaro-left.webp"
-                            srcset="
+                      ><span class="p-hero__color"
+                        ><img
+                          class="p-hero__image"
+                          src="/images/kintaro-left.webp"
+                          srcset="
 							  /images/kintaro-left.webp,
 							  /images/kintaro-left@2x.webp 2x
 							"
-                            alt=""
-                            decoding="async"
-                    /></span
-                    ></span
+                          alt=""
+                          decoding="async"
+                        /></span
+                      ></span
                     >
-                                    </li>
-                                    <li class="flex__item" data-grid="sp4">
+                  </li>
+                  <li class="flex__item" data-grid="sp4">
                     <span class="p-hero__imageWrap"
-                    ><span class="p-hero__color"
-                    ><img
-                            class="p-hero__image"
-                            src="/images/kintaro-center.webp"
-                            srcset="
+                      ><span class="p-hero__color"
+                        ><img
+                          class="p-hero__image"
+                          src="/images/kintaro-center.webp"
+                          srcset="
 							  /images/kintaro-center.webp,
 							  /images/kintaro-center@2x.webp 2x
 							"
-                            alt=""
-                            decoding="async"
-                    /></span
-                    ></span
+                          alt=""
+                          decoding="async"
+                        /></span
+                      ></span
                     >
-                                    </li>
-                                    <li class="flex__item" data-grid="sp4">
+                  </li>
+                  <li class="flex__item" data-grid="sp4">
                     <span class="p-hero__imageWrap"
-                    ><span class="p-hero__color"
-                    ><img
-                            class="p-hero__image"
-                            src="/images/kintaro-right.webp"
-                            srcset="
+                      ><span class="p-hero__color"
+                        ><img
+                          class="p-hero__image"
+                          src="/images/kintaro-right.webp"
+                          srcset="
 							  /images/kintaro-right.webp,
 							  /images/kintaro-right@2x.webp 2x
 							"
-                            alt=""
-                            decoding="async"
-                    /></span
-                    ></span
+                          alt=""
+                          decoding="async"
+                        /></span
+                      ></span
                     >
-                                    </li>
-                                </ul>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <Gallery/>
-            <Livestream/>
-        </section>
-    </main>
+                  </li>
+                </ul>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Gallery />
+      <Livestream />
+    </section>
+  </main>
 
-    <style>
-        th,
-        td {
-            padding: 8px;
-        }
+  <style>
+    th,
+    td {
+      padding: 8px;
+    }
 
-        th {
-            background-color: #000;
-            color: #fff;
-        }
-    </style>
+    th {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
 </Layout>
