@@ -9,27 +9,40 @@
       >
         <span>2024年&nbsp;立佞武多&nbsp;ライブ動画</span>
       </h2>
-
       <div class="l-spacer -top">
         <ul class="flex" data-gutter="normal" data-align="center">
-          <li
-            class="flex__item roll"
-            data-grid="lapAuto sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="540"
-              src="https://www.youtube.com/embed/--vgtHYg0fE?si=sflx6rVcZBCUf9DQ"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-            <p style="color:#FFF;">
-              注意: 動画のダウンロード、再利用、または再配布は禁止されています
-            </p>
-          </li>
+          {
+            [
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/--vgtHYg0fE?si=sflx6rVcZBCUf9DQ",
+                props: {
+                  width: "960",
+                  height: "540",
+                  title: "YouTube video player",
+                  frameBorder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+                  referrerPolicy: "strict-origin-when-cross-origin",
+                  allowFullScreen: true,
+                },
+                note: "注意: 動画のダウンロード、再利用、または再配布は禁止されています",
+              },
+            ].map((item) => (
+              <li
+                class="flex__item roll"
+                data-grid="lapAuto sp12"
+                data-type="slideUpIn"
+              >
+                {item.type === "iframe" ? (
+                  <>
+                    <iframe {...item.props} src={item.src} />
+                    <p style="color:#FFF;">{item.note}</p>
+                  </>
+                ) : null}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
@@ -46,58 +59,69 @@
       </h2>
       <div class="l-spacer -top">
         <ul class="flex" data-gutter="normal" data-align="center">
-          <li
-            class="flex__item roll"
-            data-grid="lapFive sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/_7y41Mdatb4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lapFive sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/DiZiCPE0TAs"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lapFive sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/aCkW77NY4os"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lapFive sp12"
-            data-type="slideUpIn"
-          >
-            <video width="100%" height="100%" controls>
-              <source src="/movie/2023.mp4" type="video/mp4" />
-              お使いのブラウザはvideoタグをサポートしていません。
-            </video>
-          </li>
+          {
+            [
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/_7y41Mdatb4",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/DiZiCPE0TAs",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/aCkW77NY4os",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "video",
+                src: "/movie/2023.mp4",
+                props: { width: "100%", height: "100%", controls: true },
+              },
+            ].map((item) => (
+              <li
+                class="flex__item roll"
+                data-grid="lapFive sp12"
+                data-type="slideUpIn"
+              >
+                {item.type === "iframe" ? (
+                  <iframe {...item.props} src={item.src} />
+                ) : (
+                  <video {...item.props}>
+                    <source src={item.src} type="video/mp4" />
+                    お使いのブラウザはvideoタグをサポートしていません。
+                  </video>
+                )}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
@@ -114,86 +138,95 @@
       </h2>
       <div class="l-spacer -top">
         <ul class="flex" data-gutter="normal" data-align="center">
-          <li
-            class="flex__item roll"
-            data-grid="lap2 sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/F31ZM08XNMk"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lap2 sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/lA146ElXhk0"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lap2 sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/Cstz7P0UgXk"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lap2 sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/JeGxy9WFv3A"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lap2 sp12"
-            data-type="slideUpIn"
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/ElCNIpb1eq8"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen=""></iframe>
-          </li>
-          <li
-            class="flex__item roll"
-            data-grid="lap2 sp12"
-            data-type="slideUpIn"
-          >
-            <video width="100%" height="100%" controls>
-              <source src="/movie/2022.mp4" type="video/mp4" />
-              お使いのブラウザはvideoタグをサポートしていません。
-            </video>
-          </li>
+          {
+            [
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/F31ZM08XNMk",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/lA146ElXhk0",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/Cstz7P0UgXk",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/JeGxy9WFv3A",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "iframe",
+                src: "https://www.youtube.com/embed/ElCNIpb1eq8",
+                props: {
+                  width: "100%",
+                  height: "100%",
+                  title: "YouTube video player",
+                  frameborder: "0",
+                  allow:
+                    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+                  allowfullscreen: true,
+                },
+              },
+              {
+                type: "video",
+                src: "/movie/2022.mp4",
+                props: { width: "100%", height: "100%", controls: true },
+              },
+            ].map((item) => (
+              <li
+                class="flex__item roll"
+                data-grid="lap2 sp12"
+                data-type="slideUpIn"
+              >
+                {item.type === "iframe" ? (
+                  <iframe {...item.props} src={item.src} />
+                ) : (
+                  <video {...item.props}>
+                    <source src={item.src} type="video/mp4" />
+                    お使いのブラウザはvideoタグをサポートしていません。
+                  </video>
+                )}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>

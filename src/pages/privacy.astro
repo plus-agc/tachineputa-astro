@@ -32,54 +32,42 @@ import Livestream from "../components/livestream.astro";
         <div class="flex__item" data-grid="sp12 lap6">
           <figure class="p-hero__figure">
             <ul class="flex">
-              <li class="flex__item" data-grid="sp4">
-                <span class="p-hero__imageWrap"
-                  ><span class="p-hero__color" data-id="1"
-                    ><img
-                      class="p-hero__image"
-                      src="/images/img-privacy-hero-left.jpg"
-                      srcset="
-                        /images/img-privacy-hero-left.jpg,
-                        /images/img-privacy-hero-left@2x.jpg 2x
-                      "
-                      alt=""
-                      decoding="async"
-                    /></span
-                  ></span
-                >
-              </li>
-              <li class="flex__item" data-grid="sp4">
-                <span class="p-hero__imageWrap"
-                  ><span class="p-hero__color" data-id="2"
-                    ><img
-                      class="p-hero__image"
-                      src="/images/img-privacy-hero-center.jpg"
-                      srcset="
-                        /images/img-privacy-hero-center.jpg,
-                        /images/img-privacy-hero-center@2x.jpg 2x
-                      "
-                      alt=""
-                      decoding="async"
-                    /></span
-                  ></span
-                >
-              </li>
-              <li class="flex__item" data-grid="sp4">
-                <span class="p-hero__imageWrap"
-                  ><span class="p-hero__color" data-id="3"
-                    ><img
-                      class="p-hero__image"
-                      src="/images/img-privacy-hero-right.jpg"
-                      srcset="
-                        /images/img-privacy-hero-right.jpg,
-                        /images/img-privacy-hero-right@2x.jpg 2x
-                      "
-                      alt=""
-                      decoding="async"
-                    /></span
-                  ></span
-                >
-              </li>
+              {
+                [
+                  {
+                    src: "/images/img-privacy-hero-left.jpg",
+                    srcset:
+                      "/images/img-privacy-hero-left.jpg, /images/img-privacy-hero-left@2x.jpg 2x",
+                    alt: "",
+                  },
+                  {
+                    src: "/images/img-privacy-hero-center.jpg",
+                    srcset:
+                      "/images/img-privacy-hero-center.jpg, /images/img-privacy-hero-center@2x.jpg 2x",
+                    alt: "",
+                  },
+                  {
+                    src: "/images/img-privacy-hero-right.jpg",
+                    srcset:
+                      "/images/img-privacy-hero-right.jpg, /images/img-privacy-hero-right@2x.jpg 2x",
+                    alt: "",
+                  },
+                ].map((img, i) => (
+                  <li class="flex__item" data-grid="sp4">
+                    <span class="p-hero__imageWrap">
+                      <span class="p-hero__color" data-id={i + 1}>
+                        <img
+                          class="p-hero__image"
+                          src={img.src}
+                          srcset={img.srcset}
+                          alt={img.alt}
+                          decoding="async"
+                        />
+                      </span>
+                    </span>
+                  </li>
+                ))
+              }
             </ul>
           </figure>
         </div>

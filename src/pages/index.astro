@@ -48,61 +48,38 @@ import Livestream from "../components/livestream.astro";
             <div class="l-spacer -top -mtLarge">
               <div class="l-container -narrow -top -mtMedium">
                 <div class="flex gap" data-align="justify">
-                  <div
-                    class="flex__item"
-                    data-grid="sp12 tab6 lap2"
-                    data-align="middle"
-                  >
-                    <a
-                      href="./file/2024koutsuukisei.pdf"
-                      class="c-button -primary"
-                      target="_blank">交通規制図</a
-                    >
-                  </div>
-                  <div
-                    class="flex__item"
-                    data-grid="sp12 tab6 lap2"
-                    data-align="middle"
-                  >
-                    <a
-                      href="./file/2024shutsujinnitteitorekishi_2.pdf"
-                      class="c-button -primary"
-                      target="_blank">日程と歴史</a
-                    >
-                  </div>
-                  <div
-                    class="flex__item"
-                    data-grid="sp12 tab6 lap2"
-                    data-align="middle"
-                  >
-                    <a
-                      href="./file/2024oogatakaisetsu.pdf"
-                      class="c-button -primary"
-                      target="_blank">大型解説</a
-                    >
-                  </div>
-                  <div
-                    class="flex__item"
-                    data-grid="sp12 tab6 lap2"
-                    data-align="middle"
-                  >
-                    <a
-                      href="./file/2024hyoushi.pdf"
-                      class="c-button -primary"
-                      target="_blank">表紙</a
-                    >
-                  </div>
-                  <div
-                    class="flex__item"
-                    data-grid="sp12 tab6 lap2"
-                    data-align="middle"
-                  >
-                    <a
-                      href="./file/2024Q&A_2.pdf"
-                      class="c-button -primary"
-                      target="_blank">Q&A</a
-                    >
-                  </div>
+                  {
+                    [
+                      {
+                        href: "./file/2024koutsuukisei.pdf",
+                        label: "交通規制図",
+                      },
+                      {
+                        href: "./file/2024shutsujinnitteitorekishi_2.pdf",
+                        label: "日程と歴史",
+                      },
+                      {
+                        href: "./file/2024oogatakaisetsu.pdf",
+                        label: "大型解説",
+                      },
+                      { href: "./file/2024hyoushi.pdf", label: "表紙" },
+                      { href: "./file/2024Q&A_2.pdf", label: "Q&A" },
+                    ].map((item) => (
+                      <div
+                        class="flex__item"
+                        data-grid="sp12 tab6 lap2"
+                        data-align="middle"
+                      >
+                        <a
+                          href={item.href}
+                          class="c-button -primary"
+                          target="_blank"
+                        >
+                          {item.label}
+                        </a>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             </div>
@@ -536,17 +513,17 @@ import Livestream from "../components/livestream.astro";
       <Gallery />
       <Livestream />
     </section>
+
+    <style>
+      th,
+      td {
+        padding: 8px;
+      }
+
+      th {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
   </main>
-
-  <style>
-    th,
-    td {
-      padding: 8px;
-    }
-
-    th {
-      background-color: #000;
-      color: #fff;
-    }
-  </style>
 </Layout>

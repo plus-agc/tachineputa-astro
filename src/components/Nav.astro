@@ -1,25 +1,10 @@
 ---
 const nav = [
-  {
-    href: "/#about",
-    label: "開催概要",
-  },
-  {
-    href: "/#news",
-    label: "お知らせ",
-  },
-  {
-    href: "/#departure",
-    label: "出陣立佞武多",
-  },
-  {
-    href: "/#gallery",
-    label: "フォトギャラリー",
-  },
-  {
-    href: "/#live",
-    label: "ライブ動画",
-  },
+  { href: "/#about", label: "開催概要" },
+  { href: "/#news", label: "お知らせ" },
+  { href: "/#departure", label: "出陣立佞武多" },
+  { href: "/#gallery", label: "フォトギャラリー" },
+  { href: "/#live", label: "ライブ動画" },
 ];
 ---
 
@@ -39,18 +24,18 @@ const nav = [
             aria-expanded="false"
             aria-controls="globalNav"
           >
-            <span class="p-hamburger__line"
-              ><span class="u-visuallyHidden">メニューを開閉</span></span
-            >
+            <span class="p-hamburger__line">
+              <span class="u-visuallyHidden">メニューを開閉</span>
+            </span>
           </button>
           <div class="p-drawer">
             <h2 class="u-visuallyHidden">サイト内メニュー</h2>
             <div class="p-globalNav" id="globalNav">
               <ul class="flex" data-gutter="normal" data-align="middle">
                 {
-                  nav.map((nav_item) => (
+                  nav.map(({ href, label }) => (
                     <li class="flex__item" data-grid="sp12 lapAuto">
-                      <a href={nav_item.href}>{nav_item.label}</a>
+                      <a href={href}>{label}</a>
                     </li>
                   ))
                 }
