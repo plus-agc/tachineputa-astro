@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Gallery from "../components/gallery.astro";
 import Livestream from "../components/livestream.astro";
+import HeroImage from "../images/25_hero_pc.webp";
+import HeroImageTab from "../images/25_hero_tab.webp";
+import HeroImageSp from "../images/25_hero_sp.webp";
 ---
 
 <Layout title="立佞武多公式サイト">
@@ -9,15 +12,9 @@ import Livestream from "../components/livestream.astro";
     <div class="p-hero">
       <div>
         <picture class="hero-image">
-          <source
-            media="(min-width: 1366px)"
-            srcset="/images/25_hero_pc.webp"
-          />
-          <source
-            media="(min-width: 1024px)"
-            srcset="/images/25_hero_tab.webp"
-          />
-          <img src="/images/25_hero_sp.webp" alt="2025年立佞武多" />
+          <source media="(min-width: 1366px)" srcset={HeroImage.src} />
+          <source media="(min-width: 1024px)" srcset={HeroImageTab.src} />
+          <img src={HeroImageSp.src} alt="2025年立佞武多" />
         </picture>
       </div>
       <section class="l-spacer -bgLightGrey -bgImage box-shadow" id="about">
@@ -523,6 +520,13 @@ import Livestream from "../components/livestream.astro";
       th {
         background-color: #000;
         color: #fff;
+      }
+      .hero-image img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        display: block;
       }
     </style>
   </main>

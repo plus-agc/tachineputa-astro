@@ -17,8 +17,6 @@
                 type: "iframe",
                 src: "https://www.youtube.com/embed/--vgtHYg0fE?si=sflx6rVcZBCUf9DQ",
                 props: {
-                  width: "960",
-                  height: "540",
                   title: "YouTube video player",
                   frameBorder: "0",
                   allow:
@@ -36,7 +34,9 @@
               >
                 {item.type === "iframe" ? (
                   <>
-                    <iframe {...item.props} src={item.src} />
+                    <div class="responsive-iframe-wrap">
+                      <iframe {...item.props} src={item.src} />
+                    </div>
                     <p style="color:#FFF;">{item.note}</p>
                   </>
                 ) : null}
@@ -232,3 +232,25 @@
     </div>
   </div>
 </section>
+
+<style>
+  .responsive-iframe-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    background: #000;
+  }
+  .responsive-iframe-wrap iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 0;
+    max-width: 960px;
+    max-height: 540px;
+    display: block;
+  }
+</style>
