@@ -5,6 +5,16 @@ import Livestream from "../components/livestream.astro";
 import HeroImage from "../images/25_hero_pc.webp";
 import HeroImageTab from "../images/25_hero_tab.webp";
 import HeroImageSp from "../images/25_hero_sp.webp";
+
+// ニュース記事を自動取得
+const posts = await Astro.glob("../pages/news/*.{md,astro}");
+// 日付順（新しい順）でソート
+posts.sort((a, b) =>
+  (b.frontmatter?.pubDate || b.frontmatter?.date) >
+  (a.frontmatter?.pubDate || a.frontmatter?.date)
+    ? 1
+    : -1
+);
 ---
 
 <Layout title="立佞武多公式サイト">
@@ -197,22 +207,28 @@ import HeroImageSp from "../images/25_hero_sp.webp";
                   <span>お知らせ</span>
                 </h3>
                 <div class="news-wrapper">
-                  <div class="news-item">
-                    <div class="date">2024.12.23</div>
-                    <div class="desc">
-                      <a href="/news/post-3" target="_blank">
-                        2025年度「五所川原立佞武多」ポスターデザインコンペ開催のお知らせ
-                      </a>
-                    </div>
-                  </div>
-                  <div class="news-item">
-                    <div class="date">2024.05.29</div>
-                    <div class="desc">
-                      <a href="/news/post-2" target="_blank"
-                        >大型立佞武多曳き手募集について</a
-                      >
-                    </div>
-                  </div>
+                  {
+                    posts.slice(0, 3).map((post) => {
+                      const rawDate =
+                        post.frontmatter?.pubDate || post.frontmatter?.date;
+                      const dateObj = new Date(rawDate);
+                      const formatted = dateObj.toLocaleDateString("ja-JP", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      });
+                      return (
+                        <div class="news-item">
+                          <div class="date">{formatted}</div>
+                          <div class="desc">
+                            <a href={post.url} target="_blank">
+                              {post.frontmatter?.title}
+                            </a>
+                          </div>
+                        </div>
+                      );
+                    })
+                  }
                 </div>
               </div>
               <div
