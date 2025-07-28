@@ -6147,8 +6147,18 @@ import Footer from "../components/Footer.astro";
   .hero-image {
     img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      object-fit: fill;
+      object-position: top;
+    }
+  }
+
+  @media (min-width: 430px) {
+    .hero-image {
+      img {
+        width: 100%;
+        object-fit: fill;
+        object-position: top;
+      }
     }
   }
   .mb-3 {

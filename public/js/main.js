@@ -28,6 +28,8 @@
 
   const drawer = function () {
     const elem = document.querySelector(".js-drawer");
+    if (!elem) return;  // 要素が存在しない場合は処理をスキップ
+
     elem.addEventListener("click", function (e) {
       const isExpanded =
         e.currentTarget.getAttribute("aria-expanded") !== "false";
@@ -36,11 +38,16 @@
       document.documentElement.classList.toggle(`is-drawerActive`);
     });
 
-    const nav = document.querySelectorAll("#globalNav a[href^='#']");
+    // ナビゲーションリンクを取得（#を含むすべてのリンク）
+    const nav = document.querySelectorAll("#globalNav a[href*='#']");
     for (let i = 0; i < nav.length; i++) {
       nav[i].addEventListener("click", function (e) {
-        document.documentElement.classList.remove(`is-drawerActive`);
-        elem.setAttribute("aria-expanded", false);
+        // 現在のページ内リンクの場合のみドロワーを閉じる
+        if (this.getAttribute('href').startsWith('#') ||
+          this.getAttribute('href').includes(window.location.pathname + '#')) {
+          document.documentElement.classList.remove(`is-drawerActive`);
+          elem.setAttribute("aria-expanded", false);
+        }
       });
     }
   };
